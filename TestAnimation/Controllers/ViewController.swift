@@ -16,10 +16,6 @@ class ViewController: UIViewController {
     var nextAnimation = SpringModel.getAnimation()
     private var audioPlayer: AVAudioPlayer!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     @IBAction func buttonPresed(_ sender: UIButton) {
         nextAnimation = SpringModel.getAnimation()
         
