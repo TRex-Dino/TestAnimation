@@ -13,16 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet var animationView: SpringView!
     @IBOutlet var showPropertyLabel: UILabel!
     
-    var nextAnimation = SpringModel.getAnimation()
+    private var nextAnimation = SpringModel.getAnimation()
     private var audioPlayer: AVAudioPlayer!
     
     @IBAction func buttonPresed(_ sender: UIButton) {
-        nextAnimation = SpringModel.getAnimation()
         
-        sender.setTitle("\(nextAnimation.preset)", for: .normal)
         showPropertyLabel.text = nextAnimation.title
         
         animatedView()
+        
+        nextAnimation = SpringModel.getAnimation()
+        sender.setTitle("\(nextAnimation.preset)", for: .normal)
         
         if nextAnimation.preset == "flipX" || nextAnimation.preset == "flipY" {
             playSound()

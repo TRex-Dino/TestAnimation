@@ -33,7 +33,7 @@ extension SpringModel {
             curve: data.curves.randomElement()?.rawValue ?? "easeIn",
             force: Float.random(in: 0.5...1.5),
             duration: Float.random(in: 0.5...1),
-            delay: Float.random(in: 0...1)
+            delay: Float.random(in: 0.3...0.6)
         )
     }
 }
